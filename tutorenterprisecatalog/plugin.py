@@ -15,7 +15,8 @@ config = {
     },
     "defaults": {
         "VERSION": __version__,
-        "DOCKER_IMAGE": "{{ DOCKER_REGISTRY }}diceytech/openedx-enterprise-catalog:{{ ENTERPRISECATALOG_VERSION }}",
+        # "DOCKER_IMAGE": "{{ DOCKER_REGISTRY }}diceytech/openedx-enterprise-catalog:{{ ENTERPRISECATALOG_VERSION }}",
+        "DOCKER_IMAGE": "{{ DOCKER_REGISTRY }}erickmurillo/openedx-enterprise-catalog:latest",
         "WORKER_DOCKER_IMAGE": "openedx-enterprise-catalog-worker",
         "HOST": "enterprisecatalog.{{ LMS_HOST }}",
         "MYSQL_DATABASE": "enterprisecatalog",

@@ -12,7 +12,7 @@ RUN useradd --home-dir /openedx --create-home --shell /bin/bash --uid ${APP_USER
 USER ${APP_USER_ID}
 
 ARG ENTERPRISE_CATALOG_REPOSITORY=https://github.com/edx/enterprise-catalog.git 
-ARG ENTERPRISE_CATALOG_VERSION={{ OPENEDX_COMMON_VERSION }}
+ARG ENTERPRISE_CATALOG_VERSION=open-release/nutmeg.3
 
 RUN git clone $ENTERPRISE_CATALOG_REPOSITORY --branch $ENTERPRISE_CATALOG_VERSION --depth 1 /openedx/enterprise-catalog
 WORKDIR /openedx/enterprise-catalog
